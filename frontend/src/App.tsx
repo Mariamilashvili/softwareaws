@@ -6,7 +6,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://16.171.0.82:3000/api/data'); // Replace with actual backend URL
+        const response = await fetch('http://16.171.0.82:3000/api/get-latest-answer'); // Replace with actual backend URL
         const json = await response.json();
         setAnswer(json.data); // Assumes the backend responds with { data: "..." }
       } catch (error) {
